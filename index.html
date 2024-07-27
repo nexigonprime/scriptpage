@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação</title>
+    <link rel="stylesheet" href="./css/stile.css">
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">✕</button>
+        <ul>
+            <li><a href="#section1" onclick="showSection('section1')">Introdução</a></li>
+            <!-- ------------------------------------------------------------------------------- -->
+            <li class="has-submenu">
+                <a href="#section2" onclick="toggleSubmenu('submenu1')">Game Panel</a>
+                <ul id="submenu1" class="submenu">
+                    <li><a href="#pterodactyl" onclick="showSubSection('pterodactyl')">Pterodactyl</a></li>
+                    <li><a href="#jexactyl" onclick="showSubSection('jexactyl')">jexactyl</a></li>
+                    <li><a href="#pelican" onclick="showSubSection('pelican')">pelican</a></li>
+                </ul>
+            </li>
+            <!-- ------------------------------------------------------------------------------- -->
+            <li class="has-submenu">
+                <a href="#section3" onclick="toggleSubmenu('config-submenu')">Configuração</a>
+                <ul id="config-submenu" class="submenu">
+                    <li><a href="#general1" onclick="showSubSection('general1')">Configuração Básica</a></li>
+                    <li><a href="#general2" onclick="showSubSection('general2')">Configuração Avançada</a></li>
+                    <li><a href="#advanced1" onclick="showSubSection('advanced1')">Avançado A</a></li>
+                    <li><a href="#advanced2" onclick="showSubSection('advanced2')">Avançado B</a></li>
+                </ul>
+            </li>
+            <!-- ------------------------------------------------------------------------------- -->
+            <li><a href="#section4" onclick="showSection('section4')">Uso</a></li>
+            <!-- ------------------------------------------------------------------------------- -->
+            <li><a href="#section5" onclick="showSection('section5')">FAQs</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <header>
+            <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+            <h1>Documentação do Projeto</h1>
+        </header>
+
+        <main>
+            <section id="section1" class="section visible">
+                <h2>Introdução</h2>
+                <p style="margin: 10px;">Bem-vindo à documentação do projeto.</p>
+                <p style="margin: 10px;">O projeto foi iniciado para lhe ajuda com scripts de automatização de instalação de paineis de jogos com no momento pterodactyl, jexactyl e pelican</p>
+                <h3>O que é </h3>
+                <p style="margin: 10px;">Eles são uma plataforma de gerenciamento de servidores de jogos que facilita o processo de hospedagem, administração e controle de servidores de jogos de forma eficiente e segura. Ele é projetado para ajudar tanto os administradores de servidores quanto os usuários finais a gerenciar servidores de jogos com facilidade.</p>
+            </section>
+            <!-- ------------------------------------------------------------------------------- -->
+            <section id="section2" class="section">
+                <h2>Instalação</h2>
+                <div id="installation-content">
+                    <div id="pterodactyl" class="subsection">
+                        <h3>Pterodactyl</h3>
+                        <p>Instruções para instalação do Pterodactyl.</p>
+                    </div>
+                    <div id="jexactyl" class="subsection">
+                        <h3>jexactyl</h3>
+                        <p>Instruções para instalação usando jexactyl.</p>
+                    </div>
+                    <div id="pelican" class="subsection">
+                        <h3>pelican</h3>
+                        <p>Instruções para instalação pelican.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- ------------------------------------------------------------------------------- -->
+            <section id="section3" class="section">
+                <h2>Configuração</h2>
+                <div id="config-content">
+                    <div id="general1" class="subsection">
+                        <h3>Configuração Básica</h3>
+                        <p>Detalhes sobre a configuração básica.</p>
+                    </div>
+                    <div id="general2" class="subsection">
+                        <h3>Configuração Avançada</h3>
+                        <p>Detalhes sobre a configuração avançada.</p>
+                    </div>
+                    <div id="advanced1" class="subsection">
+                        <h3>Avançado A</h3>
+                        <p>Detalhes sobre a configuração avançada A.</p>
+                    </div>
+                    <div id="advanced2" class="subsection">
+                        <h3>Avançado B</h3>
+                        <p>Detalhes sobre a configuração avançada B.</p>
+                    </div>
+                </div>
+            </section>
+            <section id="section4" class="section">
+                <h2>Uso</h2>
+                <p>Como usar o projeto.</p>
+            </section>
+            <section id="section5" class="section">
+                <h2>FAQs</h2>
+                <p>Perguntas frequentes.</p>
+            </section>
+        </main>
+    </div>
+
+    <script src="./javascript/script.js"></script>
+</body>
+</html>

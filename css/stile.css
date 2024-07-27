@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background-color: #2c3e50;
+    color: white;
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: -250px;
+    transition: 0.3s;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.sidebar ul li.has-submenu > a::after {
+    content: "▼";
+    float: right;
+}
+
+.sidebar ul li.has-submenu.active > a::after {
+    content: "▲";
+}
+
+.submenu {
+    list-style: none;
+    padding-left: 20px;
+    display: none; /* Ocultar por padrão */
+}
+
+.submenu.open {
+    display: block; /* Mostrar quando ativo */
+}
+
+.subsection {
+    display: none;
+}
+
+.subsection.visible {
+    display: block;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none; /* Ocultar por padrão */
+}
+
+.content {
+    margin-left: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    transition: margin-left 0.3s;
+}
+
+header {
+    background-color: #34495e;
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: none; /* Ocultar por padrão */
+}
+
+main {
+    padding: 20px;
+}
+
+.section {
+    display: none;
+}
+
+.section.visible {
+    display: block;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Estilos para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        left: -200px;
+        width: 200px;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .menu-btn {
+        display: block; /* Mostrar o botão de menu em dispositivos móveis */
+    }
+
+    .close-btn {
+        display: block; /* Mostrar o botão de fechar em dispositivos móveis */
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .content.open {
+        margin-left: 200px;
+    }
+}
+
+/* Estilos para dispositivos de tela maior */
+@media screen and (min-width: 769px) {
+    .menu-btn {
+        display: none; /* Ocultar o botão de menu em dispositivos maiores */
+    }
+
+    .close-btn {
+        display: none; /* Ocultar o botão de fechar em dispositivos maiores */
+    }
+
+    .sidebar {
+        left: 0; /* Mostrar a barra lateral em dispositivos maiores */
+    }
+
+    .content {
+        margin-left: 250px; /* Espaço suficiente para a barra lateral */
+    }
+}
