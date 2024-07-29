@@ -1,0 +1,118 @@
+/* Estilos para o modo claro */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilos para o modo escuro */
+body.dark-mode {
+  background-color: #333;
+  color: #f9f9f9;
+}
+
+body.dark-mode header {
+  background-color: #222;
+}
+
+/* Estilos para o botão */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Ícones do FontAwesome */
+#iconMoon:before {
+  content: "\f186"; /* Código do ícone da lua crescente do FontAwesome */
+}
+
+#iconSun:before {
+  content: "\f185"; /* Código do ícone do sol do FontAwesome */
+}
+
+/* Estilos para a estrutura de grid em PCs e TVs */
+@media screen and (min-width: 768px) {
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas lado a lado */
+    gap: 20px; /* Espaçamento entre as divs */
+    padding: 20px;
+  }
+}
+
+/* Estilos para a estrutura de grid em dispositivos menores */
+@media screen and (max-width: 767px) {
+  .projects-grid {
+    display: block;
+    padding: 20px;
+  }
+
+  .project {
+    margin-bottom: 20px; /* Espaçamento entre os projetos em dispositivos menores */
+  }
+  
+  .project:last-child {
+    margin-bottom: 0; /* Remover o espaçamento do último projeto para evitar espaço extra */
+  }
+}
+
+/* Estilos para a div do projeto */
+.project {
+  border: 1px solid #ccc; /* Adicionando a borda nas divs do projeto */
+  border-radius: 5px;
+  padding: 20px;
+}
+
+
+/* Estilos do menu para desktop */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  margin-top: 10px; /* Adiciona um espaçamento de 10px acima do menu */
+  margin-bottom: 10px; /* Adiciona um espaçamento de 10px abaixo do menu */
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para o modo escuro */
+body.dark-mode nav {
+  background-color: #222;
+  color: #f9f9f9;
+}
+
+body.dark-mode nav a {
+  color: #f9f9f9;
+}
+
+/* Estilos do menu para dispositivos móveis */
+@media screen and (max-width: 767px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    display: block;
+    margin: 5px;
+  }
+}
