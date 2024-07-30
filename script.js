@@ -1,8 +1,6 @@
-function toggleMenu() {
-    var menu = document.getElementById("menu");
-    if (menu.style.right === "-100%") {
-        menu.style.right = "0";
-    } else {
-        menu.style.right = "-100%";
-    }
-}
+const mobileMenu = document.getElementById('mobile-menu');
+const navbarMenu = document.querySelector('.navbar-menu');
+
+mobileMenu.addEventListener('click', () => {
+    navbarMenu.classList.toggle('active');
+});
