@@ -3,23 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Vertical com Conteúdo Dinâmico</title>
+    <title>Script Page</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/divslist.css">
-</head>
+    <link rel="stylesheet" href="./css/icons_fw.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
 <body>
     <header>
         <button class="menu-toggle" aria-label="Toggle menu">☰</button>
     </header>
     <nav class="sidebar">
-        <ul>
-            <!-- Adicione novos itens aqui -->
-            <li><a href="#" data-target="home">Início</a></li>
-            <li><a href="#" data-target="about">Sobre</a></li>
-            <li><a href="#" data-target="services">Serviços</a></li>
-            <li><a href="#" data-target="contact">Contato</a></li>
-            <!-- Fim da área de novos itens -->
-        </ul>
+        <div class="sidebar-content">
+            <ul>
+                <!-- Adicione novos itens aqui -->
+                <li><a href="#" data-target="home">Início</a></li>
+                <li><a href="#" data-target="gp">Game Panel</a></li>
+                <li><a href="#" data-target="ln">linux</a></li>
+                <li><a href="#" data-target="win">windows</a></li>
+                <!-- Fim da área de novos itens -->
+            </ul>
+        </div>
+        <footer class="sidebar-footer">
+            <p>© 2024 nexigonprime</p>
+            <div class="footer-icons">
+                <a href="#"><i class="fa-brands fa-discord"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </footer>
     </nav>
 
 <!-- ================================================================================= -->
@@ -27,12 +38,34 @@
     <main>
         <!-- Adicione novas seções aqui -->
         <section id="home" class="content active">
-           
+            <h1>Bem-vindo à ScriptPage!</h1>
+            <p>
+                Na ScriptPage, você encontrará uma coleção cuidadosamente selecionada de scripts para Linux e lndows, projetados para tornar suas tarefas de administração de sistemas mais fáceis e eficientes. Nossa missão é fornecer soluções práticas e acessíveis, desde scripts simples até configurações avançadas.
+            </p>
+            <h2>Explore nossos recursos:</h2>
+            <ul>
+                <li>
+                    <strong>Scripts para Linux e lndows:</strong> Encontre scripts que automatizam tarefas diárias, otimizam processos e melhoram a produtividade. Ideal para administradores de sistemas, desenvolvedores e entusiastas de tecnologia.
+                </li>
+                <li>
+                    <strong>Instalação de Painéis de Games:</strong> Descubra scripts de instalação e configuração para painéis de jogos, incluindo o popular Pterodactyl, permitindo que você gerencie seus servidores de jogos com facilidade.
+                </li>
+            </ul>
+            <h2>Por que escolher a ScriptPage?</h2>
+            <p>
+                Na ScriptPage, acreditamos em compartilhar conhecimento e capacitar nossa comunidade com ferramentas que simplificam a vida digital. Todos os nossos scripts são testados e verificados, garantindo que você tenha acesso a soluções seguras e eficientes.
+            </p>
+            <p>
+                Explore nossa página inicial e descubra o poder dos scripts na automação e otimização do seu ambiente digital. Seja você um iniciante ou um profissional experiente, a ScriptPage é o seu destino para scripts de qualidade.
+            </p>
+            <p>
+                <h2>OBS: tudo que está aqui pode ter alteraçoes futuras então não espere muito de um site de ajuda em faze de testes </h2>
+            </p>
         </section>
 
 <!-- ================================================================================= -->
     
-        <section id="about" class="content">
+        <section id="gp" class="content">
             <div class="div-pai">
                 <div class="div-filha">Filha 1</div>
                 <div class="div-filha">Filha 2</div>
@@ -43,7 +76,7 @@
 
 <!-- ================================================================================= -->
 
-        <section id="services" class="content">
+        <section id="ln" class="content">
             <div class="div-pai">
                 <div class="div-filha">Filha 1</div>
                 <div class="div-filha">Filha 2</div>
@@ -54,7 +87,7 @@
 
 <!-- ================================================================================= -->
 
-        <section id="contact" class="content">
+        <section id="win" class="content">
             <div class="div-pai">
                 <div class="div-filha">Filha 1</div>
                 <div class="div-filha">Filha 2</div>
