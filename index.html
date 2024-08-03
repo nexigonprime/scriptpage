@@ -3,26 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Flutuante Centralizado</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Menu Vertical com Conteúdo Dinâmico</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/divslist.css">
 </head>
 <body>
-    <nav class="floating-menu">
-        <div class="navbar-container">
-            <div class="navbar-brand">Meu Site</div>
-            <div class="navbar-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="navbar-menu">
-                <li class="navbar-item"><a href="#" class="navbar-link">Início</a></li>
-                <li class="navbar-item"><a href="#" class="navbar-link">Sobre</a></li>
-                <li class="navbar-item"><a href="#" class="navbar-link">Serviços</a></li>
-                <li class="navbar-item"><a href="#" class="navbar-link">Contato</a></li>
-            </ul>
-        </div>
+    <header>
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+    </header>
+    <nav class="sidebar">
+        <ul>
+            <!-- Adicione novos itens aqui -->
+            <li><a href="#" data-target="home">Início</a></li>
+            <li><a href="#" data-target="about">Sobre</a></li>
+            <li><a href="#" data-target="services">Serviços</a></li>
+            <li><a href="#" data-target="contact">Contato</a></li>
+            <!-- Fim da área de novos itens -->
+        </ul>
     </nav>
-    <script src="./script.js"></script>
+
+<!-- ================================================================================= -->
+
+    <main>
+        <!-- Adicione novas seções aqui -->
+        <section id="home" class="content active">
+           
+        </section>
+
+<!-- ================================================================================= -->
+    
+        <section id="about" class="content">
+            <div class="div-pai">
+                <div class="div-filha">Filha 1</div>
+                <div class="div-filha">Filha 2</div>
+                <div class="div-filha">Filha 3</div>
+                <!-- Você pode adicionar mais divs filhas aqui -->
+            </div>
+        </section>
+
+<!-- ================================================================================= -->
+
+        <section id="services" class="content">
+            <div class="div-pai">
+                <div class="div-filha">Filha 1</div>
+                <div class="div-filha">Filha 2</div>
+                <div class="div-filha">Filha 3</div>
+                <!-- Você pode adicionar mais divs filhas aqui -->
+            </div>
+        </section>
+
+<!-- ================================================================================= -->
+
+        <section id="contact" class="content">
+            <div class="div-pai">
+                <div class="div-filha">Filha 1</div>
+                <div class="div-filha">Filha 2</div>
+                <div class="div-filha">Filha 3</div>
+                <!-- Você pode adicionar mais divs filhas aqui -->
+            </div>
+        </section>
+        <!-- Fim da área de novas seções -->
+    </main>
+
+<!-- ================================================================================= -->
+
+    <script src="./js/script.js"></script>
+    <script src="./js/divslist.js"></script>
 </body>
 </html>
